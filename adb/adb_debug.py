@@ -136,7 +136,7 @@ def main():
         help='Seconds to wait for the dialog to be accepted when using '
              'authenticated ADB.')
     device = common_cli.GetDeviceArguments()
-    parents = [ device,common]
+    parents = [ common,device]
     parser = argparse.ArgumentParser(
         description=sys.modules[__name__].__doc__, parents=parents)
     subparsers = parser.add_subparsers(title='Commands', dest='command_name')
